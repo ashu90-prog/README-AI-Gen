@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 640" width="1280" height="640">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1117;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#161b22;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0d1117;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Accent Gradient -->
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#58a6ff;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#bc8cff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f778ba;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Glow Effect -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1280" height="640" fill="url(#bgGrad)" rx="0"/>
+  
+  <!-- Grid Pattern -->
+  <g stroke="#21262d" stroke-width="1" opacity="0.3">
+    <line x1="0" y1="0" x2="1280" y2="640"/>
+    <line x1="0" y1="80" x2="1280" y2="720"/>
+    <line x1="0" y1="160" x2="1280" y2="800"/>
+    <line x1="0" y1="240" x2="1280" y2="880"/>
+    <line x1="0" y1="320" x2="1280" y2="960"/>
+    <line x1="0" y1="400" x2="1280" y2="1040"/>
+    <line x1="0" y1="480" x2="1280" y2="1120"/>
+    <line x1="0" y1="560" x2="1280" y2="1200"/>
+    <line x1="0" y1="640" x2="1280" y2="1280"/>
+  </g>
+  
+  <!-- Decorative Code Blocks (Left Side) -->
+  <g opacity="0.15" font-family="monospace" font-size="14" fill="#58a6ff">
+    <text x="50" y="100">import { AIEngine } from '@readme-ai-gen';</text>
+    <text x="50" y="130">import { MarkdownEngine } from '@readme-ai-gen';</text>
+    <text x="50" y="180" fill="#7ee787">const engine = new AIEngine({</text>
+    <text x="80" y="210" fill="#ff7b72">provider: 'openrouter',</text>
+    <text x="80" y="240" fill="#ff7b72">model: 'openrouter/auto',</text>
+    <text x="50" y="270" fill="#7ee787">});</text>
+    <text x="50" y="320" fill="#7ee787">const readme = await engine.generate('./my-project');</text>
+    <text x="50" y="370" fill="#8b949e">// ✨ Beautiful README generated!</text>
+  </g>
+  
+  <!-- Decorative Terminal (Right Side) -->
+  <g transform="translate(850, 80)">
+    <!-- Terminal Background -->
+    <rect width="380" height="280" rx="8" fill="#0d1117" stroke="#30363d" stroke-width="2"/>
+    
+    <!-- Terminal Header -->
+    <rect width="380" height="30" rx="8" fill="#161b22"/>
+    <circle cx="20" cy="15" r="6" fill="#ff5f56"/>
+    <circle cx="40" cy="15" r="6" fill="#ffbd2e"/>
+    <circle cx="60" cy="15" r="6" fill="#27c93f"/>
+    <text x="190" y="20" text-anchor="middle" fill="#8b949e" font-size="12" font-family="monospace">terminal</text>
+    
+    <!-- Terminal Content -->
+    <text x="20" y="70" fill="#7ee787" font-family="monospace" font-size="14">$ readme-ai-gen generate --interactive</text>
+    <text x="20" y="100" fill="#58a6ff" font-family="monospace" font-size="14">ℹ  Scanning project files...</text>
+    <text x="20" y="130" fill="#58a6ff" font-family="monospace" font-size="14">✔ Found 42 file(s)</text>
+    <text x="20" y="160" fill="#58a6ff" font-family="monospace" font-size="14">ℹ  Project type: Node.js, TypeScript</text>
+    <text x="20" y="190" fill="#58a6ff" font-family="monospace" font-size="14">ℹ  Generating content with AI...</text>
+    <text x="20" y="220" fill="#3fb950" font-family="monospace" font-size="14">✔ README.md generated successfully!</text>
+    <text x="20" y="250" fill="#8b949e" font-family="monospace" font-size="14">📝 1,234 words | 8 sections | ~5 min read</text>
+    
+    <!-- Cursor -->
+    <rect x="20" y="265" width="10" height="15" fill="#58a6ff" opacity="0.8"/>
+  </g>
+  
+  <!-- Main Title (Center) -->
+  <g transform="translate(640, 280)" text-anchor="middle">
+    <!-- Logo Icon (Document with Sparkles) -->
+    <g transform="translate(-280, -80)" filter="url(#glow)">
+      <!-- Document Icon -->
+      <rect x="-30" y="-40" width="60" height="80" rx="8" fill="none" stroke="url(#accentGrad)" stroke-width="3"/>
+      <line x1="-15" y1="-15" x2="15" y2="-15" stroke="#58a6ff" stroke-width="2"/>
+      <line x1="-15" y1="0" x2="15" y2="0" stroke="#bc8cff" stroke-width="2"/>
+      <line x1="-15" y1="15" x2="5" y2="15" stroke="#f778ba" stroke-width="2"/>
+      
+      <!-- Sparkle -->
+      <g transform="translate(25, -30)">
+        <path d="M0,-10 L2,-3 L10,0 L2,3 L0,10 L-2,3 L-10,0 L-2,-3 Z" fill="#f0e68c" filter="url(#glow)"/>
+      </g>
+    </g>
+    
+    <!-- Title Text -->
+    <text x="0" y="-20" font-family="Arial, sans-serif" font-size="72" font-weight="bold" fill="url(#accentGrad)" filter="url(#glow)">
+      README-AI-Gen
+    </text>
+    
+    <!-- Subtitle -->
+    <text x="0" y="40" font-family="Arial, sans-serif" font-size="28" fill="#8b949e">
+      AI-Powered CLI for Beautiful README Generation
+    </text>
+    
+    <!-- Feature Badges -->
+    <g transform="translate(0, 100)">
+      <!-- Badge 1: Multi-Provider -->
+      <rect x="-320" y="-20" width="140" height="35" rx="17" fill="#161b22" stroke="#58a6ff" stroke-width="2"/>
+      <text x="-250" y="3" text-anchor="middle" fill="#58a6ff" font-size="14" font-family="Arial">🤖 Multi-Provider</text>
+      
+      <!-- Badge 2: Templates -->
+      <rect x="-160" y="-20" width="130" height="35" rx="17" fill="#161b22" stroke="#bc8cff" stroke-width="2"/>
+      <text x="-95" y="3" text-anchor="middle" fill="#bc8cff" font-size="14" font-family="Arial">📝 Templates</text>
+      
+      <!-- Badge 3: Validation -->
+      <rect x="-10" y="-20" width="130" height="35" rx="17" fill="#161b22" stroke="#f778ba" stroke-width="2"/>
+      <text x="55" y="3" text-anchor="middle" fill="#f778ba" font-size="14" font-family="Arial">✅ Validation</text>
+      
+      <!-- Badge 4: Interactive -->
+      <rect x="140" y="-20" width="140" height="35" rx="17" fill="#161b22" stroke="#3fb950" stroke-width="2"/>
+      <text x="210" y="3" text-anchor="middle" fill="#3fb950" font-size="14" font-family="Arial">💬 Interactive</text>
+    </g>
+  </g>
+  
+  <!-- Tech Stack Icons (Bottom) -->
+  <g transform="translate(640, 520)" text-anchor="middle">
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="18" fill="#8b949e">
+      Powered by: 
+    </text>
+    <text x="120" y="0" font-family="Arial, sans-serif" font-size="18" fill="#58a6ff">
+      OpenAI • Anthropic • Gemini • OpenRouter • NVIDIA
+    </text>
+  </g>
+  
+  <!-- GitHub URL (Bottom Right) -->
+  <text x="640" y="600" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#484f58">
+    github.com/ashu90-prog/README-AI-Gen
+  </text>
+</svg>
