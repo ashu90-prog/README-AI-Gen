@@ -44,13 +44,38 @@
 
 ## 📦 Installation
 
-```bash
-# Install globally
-npm install -g readme-ai-gen
+### Option 1: Install from npm (Recommended for Users)
 
-# Or link locally for development
-cd "C:\Users\anand\OneDrive\Documents\Readme Gen"
+```bash
+# Install globally - available immediately
+npm install -g readme-ai-gen
+```
+
+### Option 2: Install from Source (For Developers)
+
+```bash
+# Clone the repository
+git clone https://github.com/ashu90-prog/README-AI-Gen.git
+cd README-AI-Gen
+
+# Install dependencies
+npm install
+
+# Build the project
+npm run build
+
+# Link globally (makes readme-ai-gen command available everywhere)
 npm link
+```
+
+### Verify Installation
+
+```bash
+# Check version
+readme-ai-gen --version
+
+# Check AI provider configuration
+readme-ai-gen keys
 ```
 
 ## 🔑 Setup
