@@ -1,0 +1,72 @@
+# ============================================================
+# README-AI-Gen .gitignore
+# ============================================================
+
+# ── Environment Variables ────────────────────────────────────
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# ── Dependencies ─────────────────────────────────────────────
+node_modules/
+
+# ── Build Output ─────────────────────────────────────────────
+dist/
+build/
+*.tsbuildinfo
+
+# ── Cache Files ──────────────────────────────────────────────
+.readme-ai-gen-cache.json
+.cache/
+
+# ── IDE & Editor ─────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.settings/
+
+# ── OS Files ─────────────────────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ── Logs ─────────────────────────────────────────────────────
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+pnpm-debug.log*
+
+# ── Runtime Data ─────────────────────────────────────────────
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# ── Coverage & Testing ───────────────────────────────────────
+coverage/
+.nyc_output/
+.nyc_output/
+*.lcov
+.hypothesis/
+
+# ── Temporary Files ──────────────────────────────────────────
+tmp/
+temp/
+*.tmp
+*.temp
+
+# ── Generated READMEs (optional - uncomment if you want to ignore) ──
+# README.md
+# README-*.md
